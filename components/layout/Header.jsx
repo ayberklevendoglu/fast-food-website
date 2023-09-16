@@ -4,19 +4,24 @@ import { BiSolidUserCircle, BiSolidShoppingBag } from "react-icons/bi";
 import { BsSearch } from "react-icons/bs";
 import Search from "../ui/Search";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
-import OutsideClickHandler from "react-outside-click-handler";
+import { useRouter } from "next/router";
 
 const Header = () => {
   const [isSearchModal, setIsSearchModal] = useState(false);
   const [isMenuModal, setIsMenuModal] = useState(false);
+  const router = useRouter();
   return (
-    <div className="h-24 bg-slate-900">
+    <div
+      className={`h-24 z-50 absolute top-0 left-0 right-0 ${
+        router.asPath === "/" ? "bg-opacity-0" : "bg-slate-800"
+      }`}
+    >
       <div className="container mx-auto flex justify-between text-white items-center h-full">
         <div>
           <Logo />
         </div>
         <nav
-          className={`absolute sm:static top-0 left-0 sm:w-auto sm:h-auto w-full h-full sm:text-white text-black sm:bg-transparent bg-white sm:flex hidden ${
+          className={`absolute sm:static top-0 left-0 sm:w-auto sm:h-auto w-full h-screen sm:text-white text-black sm:bg-transparent bg-white sm:flex hidden ${
             isMenuModal === true && "!grid place-content-center"
           }`}
         >
@@ -68,11 +73,11 @@ const Header = () => {
           </button>
           {isMenuModal && (
             <button>
-            <AiOutlineClose
-              className="text-2xl absolute top-4 right-4 text-black hover:text-primary"
-              onClick={() => setIsMenuModal(false)}
-            />
-          </button>
+              <AiOutlineClose
+                className="text-2xl absolute top-4 right-4 text-black hover:text-primary"
+                onClick={() => setIsMenuModal(false)}
+              />
+            </button>
           )}
         </div>
       </div>
