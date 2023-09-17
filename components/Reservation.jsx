@@ -1,38 +1,58 @@
 import React from "react";
 import Title from "./ui/Title";
 import Input from "./form/Input";
+import { useFormik } from "formik";
 
 const Reservation = () => {
+  const onSubmit = async (values, actions) => {
+    await new Promise((r) => setTimeout(r, 1000));
+    actions.resetForm();
+  };
+  const { values, handleChange, handleSubmit } = useFormik({
+    initialValues: {
+      fullName: "",
+      phoneNumber: "",
+      email: "",
+      persons: "",
+      date: "",
+    },
+    onSubmit,
+  });
   const inputs = [
     {
       id: 1,
       name: "fullName",
       type: "text",
       placeholder: "Your Full Name",
+      value: values.fullName,
     },
     {
       id: 2,
       name: "phoneNumber",
       type: "number",
       placeholder: "Your Phone Number",
+      value: values.phoneNumber,
     },
     {
       id: 3,
       name: "email",
       type: "email",
       placeholder: "Your Email Address",
+      value: values.email,
     },
     {
       id: 4,
       name: "persons",
       type: "number",
       placeholder: "How Many Persons?",
+      value: values.persons,
     },
     {
       id: 5,
-      name: "persons",
+      name: "date",
       type: "datetime-local",
       placeholder: "",
+      value: values.date,
     },
   ];
   return (
@@ -41,16 +61,19 @@ const Reservation = () => {
         Book A Table
       </Title>
       <div className="flex lg:flex-row flex-col-reverse flex-1 justify-center gap-10">
-        <div className="flex flex-col items-start justify-between w-full h-inherit lg:gap-0 gap-3">
+        <form
+          className="flex flex-col items-start justify-between w-full h-inherit lg:gap-0 gap-3"
+          onSubmit={handleSubmit}
+        >
           {inputs.map((input) => (
-            <Input key={input.id} {...input} />
+            <Input key={input.id} {...input} onChange={handleChange} />
           ))}
           <div className="w-full lg:block flex justify-center">
-            <button className="btn-primary">
+            <button className="btn-primary" type="submit">
               <span className="p-5">BOOK NOW</span>
             </button>
           </div>
-        </div>
+        </form>
 
         <div className="w-full lg:block flex justify-center">
           <iframe
