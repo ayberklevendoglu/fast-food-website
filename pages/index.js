@@ -1,3 +1,4 @@
+import About from "@/components/About";
 import Campaigns from "@/components/Campaigns";
 import Carousel from "@/components/Carousel";
 import Header from "@/components/layout/Header";
@@ -8,9 +9,10 @@ export default function Home() {
   return (
     <React.Fragment>
       <Header />
-      <Carousel/>
+      <Carousel />
       <Campaigns />
       <MenuWrapper />
+      <About />
     </React.Fragment>
   );
 }

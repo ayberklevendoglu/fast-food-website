@@ -4,8 +4,8 @@ import { BsFillCartFill } from "react-icons/bs";
 
 const MenuItem = () => {
   return (
-    <div className="rounded-2xl bg-secondary max-w-[362px]">
-      <div className="relative max-w-[362px] max-h-[215px] p-6 flex justify-center bg-slate-100 rounded-bl-[3rem] rounded-t-xl">
+    <div className="rounded-3xl rounded-b-2xl bg-secondary max-w-[362px]">
+      <div className="relative max-w-[362px] max-h-[215px] p-6 flex justify-center bg-slate-100 rounded-bl-[3rem] rounded-t-2xl">
         <Image
           src="/images/f2.png"
           alt="menu"
