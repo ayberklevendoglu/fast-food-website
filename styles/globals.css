@@ -19,7 +19,7 @@ body {
   @apply bg-secondary text-white;
 }
 .slick-dots {
-  @apply sm:!flex justify-start;
+  @apply md:!flex;
 }
 .slick-dots .slick-active div {
   @apply bg-primary opacity-100 w-4 h-4;
