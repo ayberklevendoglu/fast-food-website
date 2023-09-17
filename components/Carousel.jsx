@@ -33,7 +33,7 @@ const Carousel = () => {
       </div>
       <Slider {...settings}>
         <div>
-          <div className="sm:mt-96 mt-48 text-white container flex flex-col sm:items-start items-center sm:text-start text-center gap-10">
+          <div className="sm:mt-96 mt-48 text-white container flex flex-col md:items-start items-center md:text-start text-center gap-10">
             <Title addClass="text-6xl">Fast Food Restaurant</Title>
             <p className="text-sm font-semibold sm:w-1/2 w-full">
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis
@@ -49,7 +49,7 @@ const Carousel = () => {
           </div>
         </div>
         <div>
-          <div className="sm:mt-96 mt-48 text-white container flex flex-col sm:items-start items-center sm:text-start text-center gap-10">
+          <div className="md:mt-96 mt-48 text-white container flex flex-col sm:items-start items-center sm:text-start text-center gap-10">
             <Title addClass="text-6xl">Fast Food Restaurant</Title>
             <p className="text-sm font-semibold sm:w-1/2 w-full">
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis

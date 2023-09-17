@@ -6,7 +6,7 @@ import { BsFillCartFill } from "react-icons/bs";
 const CampaignItem = ({ image }) => {
   return (
     <div className="flex bg-secondary p-6 rounded-lg gap-4 w-full">
-      <div className="rounded-full border-4 border-primary overflow-hidden hover:bg-primarydark">
+      <div className="rounded-full border-4 border-primary overflow-hidden w-40 h-40 hover:bg-primarydark">
         <Image
           src={image ? image : "/images/o1.jpg"}
           alt="campaign"
@@ -22,7 +22,7 @@ const CampaignItem = ({ image }) => {
           <Title addClass="text-center text-5xl text-white">20%</Title>
           <Title addClass="text-center text-xl text-white">Off</Title>
         </div>
-        <button className="btn-primary flex justify-center items-center gap-1">
+        <button className="btn-primary flex justify-center items-center flex-1">
           Order Now <BsFillCartFill className="text-xl" />
         </button>
       </div>
@@ -32,7 +32,7 @@ const CampaignItem = ({ image }) => {
 
 const Campaigns = () => {
   return (
-    <div className="flex container gap-8 mx-auto py-20">
+    <div className="flex flex-1 md:flex-row flex-col container gap-8 mx-auto py-20">
       <CampaignItem image={"/images/o1.jpg"} />
       <CampaignItem image={"/images/o2.jpg"} />
     </div>
