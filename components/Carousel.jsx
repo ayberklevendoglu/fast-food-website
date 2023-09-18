@@ -13,7 +13,7 @@ const Carousel = () => {
     arrows: false,
     autoplay: true,
     autoplaySpeed: 5000,
-    customPaging: function (i) {
+    customPaging: function () {
       return (
         <div className="w-3 h-3 bg-white rounded-full opacity-70 hover:opacity-100 transition-all sm:m-2 mt-5"></div>
       );
