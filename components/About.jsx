@@ -1,10 +1,16 @@
 import Image from "next/image";
 import React from "react";
 import Title from "./ui/Title";
+import { useRouter } from "next/router";
 
-const About = ({ addClass }) => {
+const About = () => {
+  const router = useRouter();
   return (
-    <div className={`${addClass} bg-secondary py-16 flex items-center text-white`}>
+    <div
+      className={` bg-secondary py-16 flex items-center ${
+        router.asPath === "/about" ? "text-secondary bg-white" : "text-white bg-secondary"
+      }`}
+    >
       <div className="container mx-auto  flex justify-center items-center gap-10 flex-wrap-reverse">
         <div className="relative lg:w-[445px] lg:h-[600px] w-[300px] h-[455px]">
           <Image src="/images/about-img.png" alt="about-img" layout="fill" />
