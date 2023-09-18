@@ -5,6 +5,7 @@ import { BsSearch } from "react-icons/bs";
 import Search from "../ui/Search";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import { useRouter } from "next/router";
+import Link from "next/link";
 
 const Header = () => {
   const [isSearchModal, setIsSearchModal] = useState(false);
@@ -13,7 +14,7 @@ const Header = () => {
   return (
     <div
       className={`h-24 z-50 absolute top-0 left-0 right-0 ${
-        router.asPath === "/" ? "bg-opacity-0" : "bg-slate-800"
+        router.asPath === "/" ? "bg-opacity-0" : "bg-secondary"
       }`}
     >
       <div className="container mx-auto flex justify-between text-white items-center h-full">
@@ -27,24 +28,24 @@ const Header = () => {
         >
           <ul className="flex gap-1 sm:flex-row flex-col items-center">
             <li className="px-1 py-5 uppercase">
-              <a className="hover:text-primary" href="">
+              <Link className="hover:text-primary" href="/">
                 Home
-              </a>
+              </Link>
             </li>
             <li className="px-1 py-5 uppercase">
-              <a className="hover:text-primary" href="">
+              <Link className="hover:text-primary" href="/menu">
                 Menu
-              </a>
+              </Link>
             </li>
             <li className="px-1 py-5 uppercase">
-              <a className="hover:text-primary" href="">
+              <Link className="hover:text-primary" href="/about">
                 About
-              </a>
+              </Link>
             </li>
             <li className="px-1 py-5 uppercase">
-              <a className="hover:text-primary" href="">
+              <Link className="hover:text-primary" href="/booktable">
                 Book Table
-              </a>
+              </Link>
             </li>
           </ul>
         </nav>

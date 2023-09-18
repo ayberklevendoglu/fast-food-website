@@ -1,9 +1,13 @@
-import React from 'react'
+import React from "react";
+import Title from "./Title";
+import Link from "next/link";
 
 const Logo = () => {
   return (
-    <div className='font-dancing text-[2rem] font-bold'>Feane</div>
-  )
-}
+    <Link href={"/"}>
+      <Title addClass={"text-4xl"}>Feane</Title>
+    </Link>
+  );
+};
 
-export default Logo
+export default Logo;

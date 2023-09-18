@@ -2,15 +2,15 @@ import Image from "next/image";
 import React from "react";
 import Title from "./ui/Title";
 
-const About = () => {
+const About = ({ addClass }) => {
   return (
-    <div className="bg-secondary py-16 flex items-center ">
+    <div className={`${addClass} bg-secondary py-16 flex items-center text-white`}>
       <div className="container mx-auto  flex justify-center items-center gap-10 flex-wrap-reverse">
         <div className="relative lg:w-[445px] lg:h-[600px] w-[300px] h-[455px]">
           <Image src="/images/about-img.png" alt="about-img" layout="fill" />
         </div>
-        <div className="text-white max-w-xl flex flex-col gap-5 lg:text-start text-center lg:items-start items-center">
-          <Title addClass="text-6xl text-white">We are Feane</Title>
+        <div className=" max-w-xl flex flex-col gap-5 lg:text-start text-center lg:items-start items-center">
+          <Title addClass="text-6xl">We are Feane</Title>
           <p>
             There are many variations of passages of Lorem Ipsum available, but
             the majority have suffered alteration in some form, by injected
