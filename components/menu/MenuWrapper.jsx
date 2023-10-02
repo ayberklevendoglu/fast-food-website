@@ -2,7 +2,7 @@ import React from "react";
 import Title from "../ui/Title";
 import MenuItem from "./MenuItem";
 
-const MenuButton = ({ buttonName }) => {
+const MenuButton = ({ buttonName, className }) => {
   return (
     <div>
       <button className="btn-secondary">
