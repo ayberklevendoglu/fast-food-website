@@ -13,8 +13,8 @@ const Header = () => {
   const router = useRouter();
   return (
     <div
-      className={`h-24 z-50 absolute top-0 left-0 right-0 ${
-        router.asPath === "/" ? "bg-opacity-0" : "bg-secondary"
+      className={`h-24 z-50 ${
+        router.asPath === "/" ? "bg-opacity-0  absolute top-0 left-0 right-0" : "bg-secondary"
       }`}
     >
       <div className="container mx-auto flex justify-between text-white items-center h-full">
@@ -50,9 +50,9 @@ const Header = () => {
           </ul>
         </nav>
         <div className="flex gap-3 items-center">
-          <a href="">
+          <Link href="/auth/login">
             <BiSolidUserCircle className="text-xl hover:text-primary" />
-          </a>
+          </Link>
           <a href="">
             <BiSolidShoppingBag className="text-xl hover:text-primary" />
           </a>

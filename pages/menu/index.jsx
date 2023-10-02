@@ -3,7 +3,7 @@ import React from "react";
 
 const Index = () => {
   return (
-    <div className="pt-36">
+    <div className="pt-14">
       <MenuWrapper />
     </div>
   );

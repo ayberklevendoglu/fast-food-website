@@ -3,7 +3,7 @@ import React from 'react'
 
 const Index = () => {
   return (
-    <div className='pt-20'>
+    <div className='pt-10'>
       <Reservation />
     </div>
   )

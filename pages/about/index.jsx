@@ -3,7 +3,7 @@ import React from "react";
 
 const Index = () => {
   return (
-    <div className="pt-36">
+    <div className="py-4">
       <About />
     </div>
   );
