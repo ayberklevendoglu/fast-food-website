@@ -53,9 +53,9 @@ const Header = () => {
           <Link href="/auth/login">
             <BiSolidUserCircle className="text-xl hover:text-primary" />
           </Link>
-          <a href="">
+          <Link href="/cart">
             <BiSolidShoppingBag className="text-xl hover:text-primary" />
-          </a>
+          </Link>
           <button
             onClick={() => {
               setIsSearchModal(true);
