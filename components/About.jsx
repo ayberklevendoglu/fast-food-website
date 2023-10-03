@@ -13,7 +13,7 @@ const About = () => {
     >
       <div className="container mx-auto  flex justify-center items-center gap-10 flex-wrap-reverse">
         <div className="relative lg:w-[445px] lg:h-[600px] w-[300px] h-[455px]">
-          <Image src="/images/about-img.png" alt="about-img" layout="fill" />
+          <Image src="/images/about-img.png" alt="about-img" layout="fill" className="fill" />
         </div>
         <div className=" max-w-xl flex flex-col gap-5 lg:text-start text-center lg:items-start items-center">
           <Title addClass="text-6xl">We are Feane</Title>
