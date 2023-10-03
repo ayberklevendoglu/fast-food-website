@@ -14,7 +14,9 @@ const Header = () => {
   return (
     <div
       className={`h-24 z-50 ${
-        router.asPath === "/" ? "bg-opacity-0  absolute top-0 left-0 right-0" : "bg-secondary"
+        router.asPath === "/"
+          ? "bg-opacity-0  absolute top-0 left-0 right-0"
+          : "bg-secondary"
       }`}
     >
       <div className="container mx-auto flex justify-between text-white items-center h-full">
@@ -22,28 +24,44 @@ const Header = () => {
           <Logo />
         </div>
         <nav
-          className={`absolute sm:static top-0 left-0 sm:w-auto sm:h-auto w-full h-screen sm:text-white text-black sm:bg-transparent bg-white sm:flex hidden ${
-            isMenuModal === true && "!grid place-content-center"
+          className={`absolute sm:static top-0 left-0  sm:w-auto sm:h-auto w-full h-screen sm:text-white text-black sm:bg-transparent bg-white sm:flex hidden ${
+            isMenuModal === true && "!grid place-content-center z-10"
           }`}
         >
           <ul className="flex gap-1 sm:flex-row flex-col items-center">
             <li className="px-1 py-5 uppercase">
-              <Link className="hover:text-primary" href="/">
+              <Link
+                className="hover:text-primary"
+                href="/"
+                onClick={() => setIsMenuModal(false)}
+              >
                 Home
               </Link>
             </li>
             <li className="px-1 py-5 uppercase">
-              <Link className="hover:text-primary" href="/menu">
+              <Link
+                className="hover:text-primary"
+                href="/menu"
+                onClick={() => setIsMenuModal(false)}
+              >
                 Menu
               </Link>
             </li>
             <li className="px-1 py-5 uppercase">
-              <Link className="hover:text-primary" href="/about">
+              <Link
+                className="hover:text-primary"
+                href="/about"
+                onClick={() => setIsMenuModal(false)}
+              >
                 About
               </Link>
             </li>
             <li className="px-1 py-5 uppercase">
-              <Link className="hover:text-primary" href="/booktable">
+              <Link
+                className="hover:text-primary"
+                href="/booktable"
+                onClick={() => setIsMenuModal(false)}
+              >
                 Book Table
               </Link>
             </li>
