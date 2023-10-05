@@ -41,7 +41,7 @@ const MenuWrapper = () => {
             className={`btn-secondary ${activeButton === 3 && "bg-slate-900 text-white"}`}
             onClick={() => setActiveButton(3)}
           >
-            All
+            Drinks
           </button>
           <button
             className={`btn-secondary ${activeButton === 4 && "bg-slate-900 text-white"}`}
